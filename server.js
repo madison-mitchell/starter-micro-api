@@ -17,33 +17,33 @@ app.use((req, res, next) => {
 // Define a helper function to format the email message as HTML
 function formatEmailMessage(formData) {
   return `
-    <h2>New Contact Form Submission</h2>
-    <table>
-      <tr>
-        <td style="padding-right: 10px;"><strong>First Name:</strong></td>
-        <td>${formData.firstName}</td>
-      </tr>
-      <tr>
-        <td style="padding-right: 10px;"><strong>Last Name:</strong></td>
-        <td>${formData.lastName}</td>
-      </tr>
-      <tr>
-        <td style="padding-right: 10px;"><strong>Company:</strong></td>
-        <td>${formData.company}</td>
-      </tr>
-      <tr>
-        <td style="padding-right: 10px;"><strong>Email:</strong></td>
-        <td>${formData.email}</td>
-      </tr>
-      <tr>
-        <td style="padding-right: 10px;"><strong>Phone Number:</strong></td>
-        <td>${formData.phoneNumber}</td>
-      </tr>
-    </table>
-
-    <p>${formData.message}</p>
-
-    <p>This email was sent from your website's contact form.</p>
+    <body style="background-color: white;">
+      <h2 style="text-align: center;">New Contact Form Submission</h2>
+      <table style="margin: auto;">
+        <tr>
+          <td style="padding-right: 10px;"><strong>First Name:</strong></td>
+          <td>${formData.firstName}</td>
+        </tr>
+        <tr>
+          <td style="padding-right: 10px;"><strong>Last Name:</strong></td>
+          <td>${formData.lastName}</td>
+        </tr>
+        <tr>
+          <td style="padding-right: 10px;"><strong>Company:</strong></td>
+          <td>${formData.company}</td>
+        </tr>
+        <tr>
+          <td style="padding-right: 10px;"><strong>Email:</strong></td>
+          <td>${formData.email}</td>
+        </tr>
+        <tr>
+          <td style="padding-right: 10px;"><strong>Phone Number:</strong></td>
+          <td>${formData.phoneNumber}</td>
+        </tr>
+      </table>
+      <p>${formData.message}</p>
+      <p>This email was sent from your website's contact form.</p>
+    </body>
   `;
 }
 
